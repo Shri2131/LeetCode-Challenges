@@ -37,10 +37,16 @@ class Solution {
 
         //Merging according to the condition
         while(head!=null && dummy!=null){
+            //Storing the next pointer of firsthalf
             ListNode temp = curr.next;
+            //Linking it with pointer of second half
             curr.next = dummy;
+            //Storing the next pointer of second half
             ListNode temp2 = dummy.next;
+            //Linking it to the next pointer of first hald
             dummy.next = temp;
+
+            //Incrementing first and second half to there next values
             curr=temp;
             dummy=temp2;
         }
