@@ -5,9 +5,9 @@ class Solution {
         int end = nums.length-1;
         
         while(start<end){
-            if((0-nums[start])==nums[end]){
+            if(-nums[start]==nums[end]){
                 return nums[end];
-            }else if((0-nums[start])>nums[end]){
+            }else if(-nums[start]>nums[end]){
                 start++;
             }else{
                 end--;
